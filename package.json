@@ -27,7 +27,8 @@
     "react-spring": "8.0.x"
   },
   "devDependencies": {
-    "babel-preset-expo": "6.0.x"
+    "babel-preset-expo": "6.0.x",
+    "expo-cli": "3.0.x"
   },
   "private": true
 }
