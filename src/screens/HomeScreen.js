@@ -6,8 +6,8 @@ import useNavigation from '../utils/useNavigation';
 
 const menuRoutes = [
   ROUTE.ANIMATABLE,
-  ROUTE.FIBER,
-  ROUTE.FLARE,
+  // ROUTE.FIBER,
+  // ROUTE.FLARE,
   ROUTE.FLUID_TRANSITIONS,
   ROUTE.LOTTIE,
   ROUTE.MOTION,
@@ -19,7 +19,7 @@ const menuRoutes = [
 
 const Item = ({ route }) => {
   const { key, title } = route;
-  const { navigate } = useNavigation();
+  const [{ navigate }] = useNavigation();
 
   return (
     <TouchableOpacity onPress={() => navigate(key)}>
@@ -46,7 +46,7 @@ const HomeScreen = () => (
 
 const styles = StyleSheet.create({
   homeScreen: {
-    backgroundColor: '#f6f6f6',
+    backgroundColor: '#f3f3f3',
     flex: 1,
   },
   flatListContentContainer: {

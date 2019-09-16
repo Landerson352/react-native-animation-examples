@@ -1,7 +1,5 @@
 import { each } from 'lodash';
 
-// TODO: Add npm and github slugs to each library route.
-
 const ROUTE = {
   ANIMATABLE: {
     title: 'Animatable',
