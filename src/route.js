@@ -53,9 +53,11 @@ const ROUTE = {
     infoUrl: 'https://popmotion.io/pose/',
     github: 'Popmotion/popmotion',
     npm: 'react-native-pose',
-    description: 'An animation system which automatically transitions components between states.'
+    description: 'Pose is an animation system which automatically transitions components between states,'
+      + ' or when adding or removing nodes.'
       + ' Supports groups, animating text characters, dragging interactivity, & interpolation.'
-      + ' From the makers of Framer.'
+      + ' From the makers of Framer. Pose has been succeeded by Framer Motion,'
+      + ' but that does not support React Native yet.',
   },
   REANIMATED: {
     title: 'Reanimated',
