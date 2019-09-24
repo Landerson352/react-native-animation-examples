@@ -64,15 +64,15 @@ const PoseScreen = () => {
 
   return (
     <ScrollView>
-      <View style={s.p4}>
+      <View style={s.pcontent}>
         <RouteInfo />
       </View>
 
-      <View style={[s.p4, s.bgAlmostWhite]}>
+      <View style={[s.pcontent, s.bgAlmostWhite]}>
         <Text uppercase b muted p>Examples</Text>
 
         <Card>
-          <View style={s.p4}>
+          <View style={s.pcontent}>
             <Text h3 style={s.mb2}>Enter/exit transitions</Text>
             <Text>
               A component with "enter" and "exit" poses, placed inside of a Transition node,
@@ -94,7 +94,7 @@ const PoseScreen = () => {
         </Card>
 
         <Card>
-          <View style={s.p4}>
+          <View style={s.pcontent}>
             <Text h3 style={s.mb2}>Dynamic props</Text>
             <Text>
               A component can have "poses", each with defined values.
@@ -112,7 +112,7 @@ const PoseScreen = () => {
         </Card>
 
         <Card>
-          <View style={s.p4}>
+          <View style={s.pcontent}>
             <Text h3 style={s.mb2}>Passive properties</Text>
             <Text>
               Props can be "passive", which means they are dependent
@@ -130,14 +130,15 @@ const PoseScreen = () => {
         </Card>
 
         <Card>
-          <View style={s.p4}>
+          <View style={s.pcontent}>
             <Text h3 style={s.mb2}>Draggable</Text>
             <Text>
               The "draggable" config enables dragging, with the option to
               define the appearance while being dragged.
               Some values can be interpolated along with the drag position.
               The draggable API is
-              pretty limited for native, but the maintainers are working on it.
+              fairly limited for native, but the maintainers have plans
+              to improve it.
             </Text>
           </View>
           <AnimationCanvas>

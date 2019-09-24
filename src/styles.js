@@ -33,8 +33,17 @@ const styles = StyleSheet.create({
     backgroundColor: 'aquamarine',
     borderRadius: 4,
   },
+  pcontent: {
+    padding: 16,
+  },
+  p1: {
+    padding: 4,
+  },
   p2: {
     padding: 8,
+  },
+  p3: {
+    padding: 12,
   },
   p4: {
     padding: 16,
@@ -60,6 +69,9 @@ const styles = StyleSheet.create({
   bgBlack: {
     backgroundColor: '#000',
   },
+  bgWhite: {
+    backgroundColor: '#fff',
+  },
   fontWeightBold: {
     fontWeight: 'bold',
   },
@@ -68,6 +80,21 @@ const styles = StyleSheet.create({
   },
   muted: {
     color: '#888',
+  },
+  shadow1: {
+    elevation: 1,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+  },
+  rounded: {
+    borderRadius: 4,
+  },
+  overflowHidden: {
+    overflow: 'hidden',
+  },
+  blue: {
+    color: '#0071FF',
   },
 });
 

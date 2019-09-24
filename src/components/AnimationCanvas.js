@@ -8,8 +8,8 @@ const styles = StyleSheet.create({
   animationCanvas: {
     ...s.centerContentAndItems,
     ...s.bgBlack,
+    ...s.overflowHidden,
     height: 160,
-    overflow: 'hidden',
   },
 });
 

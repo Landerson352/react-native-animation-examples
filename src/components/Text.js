@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     lineHeight: 40,
   },
   link: {
-    color: '#0071FF',
+    ...s.blue,
   },
 });
 
