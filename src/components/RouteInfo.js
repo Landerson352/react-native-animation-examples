@@ -5,11 +5,11 @@ import s from '../styles';
 import useNavigation from '../utils/useNavigation';
 import Text from '../components/Text';
 
-const RouteInfo = () => {
+const RouteInfo = (props) => {
   const [, route] = useNavigation();
 
   return (
-    <View>
+    <View {...props}>
       <Text h1 p>{route.title}</Text>
 
       <Text p>{route.description}</Text>
