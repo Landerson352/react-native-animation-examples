@@ -58,6 +58,7 @@ const ROUTE = {
     npm: 'react-native-pose',
     description: 'Pose is an animation system which automatically transitions components between states,'
       + ' or when adding or removing nodes.'
+      + ' Supports tween, keyframe, or spring based transitions.'
       + ' Supports groups, animating text characters, dragging interactivity, & interpolation.'
       + ' From the makers of Framer. Pose has been succeeded by Framer Motion,'
       + ' but that does not support React Native yet.',
@@ -85,7 +86,8 @@ const ROUTE = {
     npm: 'react-spring',
     description: 'Primitives for driving animations with spring-based physics,'
       + ' as opposed to defined curves and durations.'
-      + ' Support staggering & chaining animations.'
+      + ' By setting mass, tension and friction, you can add bounce or dampen the motion.'
+      + ' Support staggering & chaining animations, as well as enter/exit animations.'
       + ' Support hooks (unlike react-motion) & render-props.'
       + ' "Inspired in part by react-motion, but more concise and expressive."'
   },
