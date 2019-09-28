@@ -15,6 +15,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  grow1: {
+    flexGrow: 1,
+  },
+  m2: {
+    margin: 8,
+  },
   mb1: {
     marginBottom: 4,
   },
@@ -31,6 +37,22 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     backgroundColor: 'aquamarine',
+    borderRadius: 4,
+  },
+  shapeB: {
+    width: 80,
+    height: 80,
+    backgroundColor: 'aquamarine',
+    borderRadius: 40,
+  },
+  shapeC: {
+    ...StyleSheet.absoluteFill,
+    backgroundColor: 'lightsalmon',
+  },
+  shapeD: {
+    width: 80,
+    height: 80,
+    backgroundColor: 'deeppink',
     borderRadius: 4,
   },
   pcontent: {
@@ -59,6 +81,9 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
+  },
+  wrap: {
+    flexWrap: 'wrap',
   },
   spaceBetweenContent: {
     justifyContent: 'space-between',
