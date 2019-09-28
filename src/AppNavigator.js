@@ -1,6 +1,7 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
+import createRouteConfig from './utils/createRouteConfig';
 import ROUTE from './route';
 import AnimatableScreen from './screens/AnimatableScreen';
 import FiberScreen from './screens/FiberScreen';
@@ -13,15 +14,6 @@ import PoseScreen from './screens/PoseScreen';
 import ReanimatedScreen from './screens/ReanimatedScreen';
 import SharedElementScreen from './screens/SharedElementScreen';
 import SpringScreen from './screens/SpringScreen';
-
-const createRouteConfig = ({ key, title }, screen) => ({
-  [key]: {
-    screen,
-    navigationOptions: {
-      title,
-    },
-  },
-});
 
 const AppNavigator = createStackNavigator({
   ...createRouteConfig(ROUTE.HOME, HomeScreen),
