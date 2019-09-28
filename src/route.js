@@ -49,7 +49,7 @@ const ROUTE = {
     description: 'Primitives for driving animations with spring-based physics,'
       + ' as opposed to defined curves and durations.'
       + ' Support staggering & chaining animations, as well as mounting/unmounting transitions..'
-      + ' Uses render-props.'
+      + ' Uses render-props, but not hooks (unlike react-spring).'
   },
   POSE: {
     title: 'Pose',
@@ -86,7 +86,7 @@ const ROUTE = {
     description: 'Primitives for driving animations with spring-based physics,'
       + ' as opposed to defined curves and durations.'
       + ' Support staggering & chaining animations.'
-      + ' Support hooks & render-props.'
+      + ' Support hooks (unlike react-motion) & render-props.'
       + ' "Inspired in part by react-motion, but more concise and expressive."'
   },
 };
