@@ -6,6 +6,7 @@ import s from '../styles';
 import AnimationCanvas from '../components/AnimationCanvas';
 import Card from '../components/Card';
 import ControlRow from '../components/ControlRow';
+import ExamplesContainer from '../components/ExamplesContainer';
 import RouteInfo from '../components/RouteInfo';
 import Text from '../components/Text';
 
@@ -68,8 +69,7 @@ const PoseScreen = () => {
         <RouteInfo />
       </View>
 
-      <View style={[s.pcontent, s.bgAlmostWhite]}>
-        <Text uppercase b muted p>Examples</Text>
+      <ExamplesContainer>
 
         <Card>
           <View style={s.pcontent}>
@@ -146,7 +146,7 @@ const PoseScreen = () => {
           </AnimationCanvas>
         </Card>
 
-      </View>
+      </ExamplesContainer>
 
     </ScrollView>
   );
