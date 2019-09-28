@@ -11,6 +11,8 @@ const styles = StyleSheet.create({
     ...s.row,
     ...s.centerItems,
     ...s.spaceBetweenContent,
+    borderColor: '#eee',
+    borderTopWidth: 1,
   },
 });
 
