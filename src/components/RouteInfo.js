@@ -6,7 +6,8 @@ import useNavigation from '../utils/useNavigation';
 import Text from '../components/Text';
 
 const RouteInfo = (props) => {
-  const [, route] = useNavigation();
+  let [, navigationRoute] = useNavigation();
+  const { route = navigationRoute } = props;
 
   return (
     <View {...props}>
