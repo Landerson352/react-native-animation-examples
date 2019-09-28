@@ -10,7 +10,11 @@ const useNavigation = () => {
   const routeName = get(navigation, 'state.routeName');
   const route = ROUTE[routeName];
 
-  return [navigation, route];
+  const handleNavigate = (ROUTE, params) => {
+    return () => navigation.navigate(ROUTE.key, params);
+  };
+
+  return [navigation, route, handleNavigate];
 };
 
 export default useNavigation;
