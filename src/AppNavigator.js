@@ -23,11 +23,11 @@ const AppNavigator = createStackNavigator({
   ...createRouteConfig(ROUTE.FLARE, FlareScreen),
   ...createRouteConfig(ROUTE.FLUID_TRANSITIONS, FluidTransitionsScreen),
   ...createRouteConfig(ROUTE.LOTTIE, LottieScreen),
-  ...createRouteConfig(ROUTE.MOTION, MotionScreen),
   ...createRouteConfig(ROUTE.POSE, PoseScreen),
+  ...createRouteConfig(ROUTE.REACT_MOTION, MotionScreen),
+  ...createRouteConfig(ROUTE.REACT_SPRING, SpringScreen),
   ...createRouteConfig(ROUTE.REANIMATED, ReanimatedScreen),
   ...createRouteConfig(ROUTE.SHARED_ELEMENT, SharedElementScreen),
-  ...createRouteConfig(ROUTE.SPRING, SpringScreen),
 });
 
 export default createAppContainer(AppNavigator);

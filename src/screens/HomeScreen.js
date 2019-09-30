@@ -12,11 +12,11 @@ const menuRoutes = [
   // ROUTE.FLARE,
   ROUTE.FLUID_TRANSITIONS,
   ROUTE.LOTTIE,
-  // ROUTE.MOTION,
   ROUTE.POSE,
+  // ROUTE.REACT_MOTION,
+  ROUTE.REACT_SPRING,
   ROUTE.REANIMATED,
   // ROUTE.SHARED_ELEMENT,
-  ROUTE.SPRING,
 ];
 
 const Item = ({ route }) => {
@@ -37,13 +37,10 @@ const renderItem = ({ item }) => (
 );
 
 const header = (
-  <>
-    <Text h1 p>Welcome!</Text>
-    <Text p>
-      Here we demonstrate the key capabilities of various React Native animation libraries,
-      and give you clues and resources to dig deeper on the ones that are most applicable to your app.
-    </Text>
-  </>
+  <Text p>
+    Here we demonstrate the key capabilities of various React Native animation libraries in the simplest way,
+    and give you clues and resources to dig deeper on the ones that are most applicable to your app.
+  </Text>
 );
 
 const HomeScreen = () => (

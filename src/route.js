@@ -24,7 +24,8 @@ const ROUTE = {
     title: 'FluidTransitions',
     github: 'fram-x/FluidTransitions',
     npm: 'react-navigation-fluid-transitions',
-    description: 'Transitioning elements between React-Navigation (v3 and below) screens.'
+    description: 'FluidTransitions animates elements between react-navigation screens.'
+      + ' Only supports react-navigation v3 and below.'
       + ' Supports shared elements, appear/disappear transitions, staggering, and custom transitions.'
       + ' No linking required (unlike Shared Element).'
   },
@@ -42,15 +43,6 @@ const ROUTE = {
     description: 'Parses Adobe After Effects animations exported as JSON with bodymovin and renders them natively.'
       + ' Supported by Expo. Otherwise, required linking.',
   },
-  MOTION: {
-    title: 'Motion',
-    github: 'chenglou/react-motion',
-    npm: 'react-motion',
-    description: 'Primitives for driving animations with spring-based physics,'
-      + ' as opposed to defined curves and durations.'
-      + ' Support staggering & chaining animations, as well as mounting/unmounting transitions..'
-      + ' Uses render-props, but not hooks (unlike react-spring).'
-  },
   POSE: {
     title: 'Pose',
     infoUrl: 'https://popmotion.io/pose/',
@@ -63,33 +55,42 @@ const ROUTE = {
       + ' From the makers of Framer. Pose has been succeeded by Framer Motion,'
       + ' but that does not support React Native yet.',
   },
+  REACT_MOTION: {
+    title: 'React Motion',
+    github: 'chenglou/react-motion',
+    npm: 'react-motion',
+    description: 'React Motion provides Primitives for driving animations with spring-based physics,'
+      + ' as opposed to defined curves and durations.'
+      + ' Support staggering & chaining animations, as well as mounting/unmounting transitions..'
+      + ' Uses render-props, but not hooks (unlike React Spring).'
+  },
+  REACT_SPRING: {
+    title: 'React Spring',
+    infoUrl: 'https://www.react-spring.io/',
+    github: 'react-spring/react-spring',
+    npm: 'react-spring',
+    description: 'React Spring provides primitives for driving animations with spring-based physics,'
+      + ' as opposed to defined curves and durations.'
+      + ' By setting mass, tension and friction, you can add bounce or dampen the motion.'
+      + ' Support staggering & chaining animations, as well as enter/exit animations.'
+      + ' Support hooks (unlike React Motion) & render-props.'
+      + ' "Inspired in part by React Motion, but more concise and expressive."'
+  },
   REANIMATED: {
     title: 'Reanimated',
     github: 'kmagiera/react-native-reanimated',
     npm: 'react-native-reanimated',
-    description: 'React Native\'s Animated library reimplemented,'
+    description: 'Reanimated is "React Native\'s Animated library reimplemented",'
       + ' for better support of gesture-based interactions.',
   },
   SHARED_ELEMENT: {
     title: 'Shared Element',
     github: 'IjzerenHein/react-native-shared-element',
     npm: 'react-native-shared-element',
-    description: 'Primitives for transitioning elements between screens.'
+    description: 'Shared Element provides primitives for transitioning elements between screens.'
       + ' Has bindings for React Navigation\'s StackNavigator.'
       + ' Linking required (unlike FluidTransitions).'
       + ' Road-map to include appear/disappear transitions and Expo support.'
-  },
-  SPRING: {
-    title: 'Spring',
-    infoUrl: 'https://www.react-spring.io/',
-    github: 'react-spring/react-spring',
-    npm: 'react-spring',
-    description: 'Primitives for driving animations with spring-based physics,'
-      + ' as opposed to defined curves and durations.'
-      + ' By setting mass, tension and friction, you can add bounce or dampen the motion.'
-      + ' Support staggering & chaining animations, as well as enter/exit animations.'
-      + ' Support hooks (unlike react-motion) & render-props.'
-      + ' "Inspired in part by react-motion, but more concise and expressive."'
   },
 };
 
