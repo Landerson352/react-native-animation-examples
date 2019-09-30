@@ -56,9 +56,9 @@ const MainScreen = () => {
           <View style={s.pcontent}>
             <Text h3 style={s.mb2}>Appear / Disappear</Text>
             <Text>
-              Elements can instead be wrapped with a non-shared Transition node, with "appear" or "disappear" props,
-              dictating a shorthand animation when navigating (ex: "flip" or "scale").
-              The "delay" prop can be added for a staggering effect.
+              Elements can instead be simply wrapped with a Transition node assigned with an "appear" prop,
+              dictating a shorthand animation when navigating (ex: "top" or "scale").
+              Note that the mere presence of the Transition node creates a "fade" transition on the screen itself.
             </Text>
           </View>
           <ControlRow>
@@ -72,7 +72,6 @@ const MainScreen = () => {
   );
 };
 
-
 const Example1Screen = () => {
   const [{ goBack }] = useNavigation();
 
@@ -84,7 +83,7 @@ const Example1Screen = () => {
       <View style={s.pcontent}>
         <Example1Content />
       </View>
-      <Transition appear="scale" disappear="scale">
+      <Transition appear="scale">
         <Button title="More Examples" onPress={() => goBack()} />
       </Transition>
     </ScrollView>
@@ -95,39 +94,17 @@ const Example2Screen = () => {
   const [{ goBack }] = useNavigation();
 
   return (
-    <ScrollView contentContainerStyle={[s.grow1, s.centerContent]}>
-
-      <View style={[s.wrap, s.row, s.p2]}>
-        <Transition appear="left" disappear="left">
-          <View style={[s.shapeD, s.m2]} />
-        </Transition>
-        <Transition appear="top" disappear="top">
-          <View style={[s.shapeD, s.m2]} />
-        </Transition>
-        <Transition appear="right" disappear="right">
-          <View style={[s.shapeD, s.m2]} />
-        </Transition>
-        <Transition appear="flip" disappear="flip">
-          <View style={[s.shapeD, s.m2]} />
-        </Transition>
-        <Transition appear="scale" disappear="scale">
-          <View style={[s.shapeD, s.m2]} />
-        </Transition>
-        <Transition appear="flip" disappear="flip">
-          <View style={[s.shapeD, s.m2]} />
-        </Transition>
-        <Transition appear="left" disappear="left">
-          <View style={[s.shapeD, s.m2]} />
-        </Transition>
-        <Transition appear="bottom" disappear="bottom">
-          <View style={[s.shapeD, s.m2]} />
-        </Transition>
-        <Transition appear="right" disappear="right">
-          <View style={[s.shapeD, s.m2]} />
-        </Transition>
-      </View>
-
-      <Transition appear="scale" disappear="scale">
+    <ScrollView contentContainerStyle={[s.grow1, s.pcontent, s.centerItems, s.centerContent]}>
+      <Transition appear="top">
+        <View style={[s.shapeD, s.mb4]} />
+      </Transition>
+      <Transition appear="left">
+        <View style={[s.shapeD, s.mb4]} />
+      </Transition>
+      <Transition appear="right">
+        <View style={[s.shapeD, s.mb4]} />
+      </Transition>
+      <Transition appear="bottom">
         <Button title="More Examples" onPress={() => goBack()} />
       </Transition>
     </ScrollView>

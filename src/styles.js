@@ -47,11 +47,11 @@ const styles = StyleSheet.create({
   },
   shapeC: {
     ...StyleSheet.absoluteFill,
-    backgroundColor: 'lightsalmon',
+    backgroundColor: 'aquamarine',
   },
   shapeD: {
-    width: 80,
     height: 80,
+    width: 80,
     backgroundColor: 'deeppink',
     borderRadius: 4,
   },

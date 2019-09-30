@@ -24,7 +24,7 @@ const ROUTE = {
     title: 'FluidTransitions',
     github: 'fram-x/FluidTransitions',
     npm: 'react-navigation-fluid-transitions',
-    description: 'Transitioning elements between React-Navigation screens.'
+    description: 'Transitioning elements between React-Navigation (v3 and below) screens.'
       + ' Supports shared elements, appear/disappear transitions, staggering, and custom transitions.'
       + ' No linking required (unlike Shared Element).'
   },
