@@ -90,7 +90,7 @@ const ROUTE = {
     npm: 'react-native-shared-element',
     description: 'Shared Element provides primitives for transitioning elements between screens.'
       + ' Has bindings for React Navigation\'s StackNavigator.'
-      + ' Linking requires (unlike FluidTransitions).'
+      + ' Has Expo (SDK 35) support, otherwise requires linking (unlike FluidTransitions).'
       + ' Road-map to include appear/disappear transitions and Expo support.'
   },
 };
