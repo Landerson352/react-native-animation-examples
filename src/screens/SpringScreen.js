@@ -22,6 +22,7 @@ const EXAMPLE_1_STATE = {
 };
 
 const SPRING_CONFIG = {
+  SPEEDY: { mass: 1, tension: 200, friction: 20 },
   LIVELY: { mass: 1, tension: 500, friction: 10 },
 };
 
@@ -30,11 +31,20 @@ export default () => {
     ...EXAMPLE_1_STATE.INACTIVE,
     config: SPRING_CONFIG.LIVELY,
   }));
-  const [isActive, _setIsActive] = useState(false);
-
-  const setIsActive = (willBeActive) => {
+  const [isBasicActive, _setIsBasicActive] = useState(false);
+  const setIsBasicActive = (willBeActive) => {
     setBasicSpringStyles(willBeActive ? EXAMPLE_1_STATE.ACTIVE : EXAMPLE_1_STATE.INACTIVE);
-    _setIsActive(willBeActive);
+    _setIsBasicActive(willBeActive);
+  };
+
+  const [trailSpringStyles, setTrailSpringStyles] = useTrail(5,() => ({
+    ...EXAMPLE_1_STATE.INACTIVE,
+    config: SPRING_CONFIG.SPEEDY,
+  }));
+  const [isTrailActive, _setIsTrailActive] = useState(false);
+  const setIsTrailActive = (willBeActive) => {
+    setTrailSpringStyles(willBeActive ? EXAMPLE_1_STATE.ACTIVE : EXAMPLE_1_STATE.INACTIVE);
+    _setIsTrailActive(willBeActive);
   };
 
   return (
@@ -56,7 +66,28 @@ export default () => {
           </AnimationCanvas>
           <ControlRow>
             <Text>Toggle position</Text>
-            <Switch onValueChange={setIsActive} value={isActive} />
+            <Switch onValueChange={setIsBasicActive} value={isBasicActive} />
+          </ControlRow>
+        </Card>
+
+        <Card>
+          <View style={s.pcontent}>
+            <Text h3 style={s.mb2}>Trail</Text>
+            <Text>
+              Trail can be used for staggered animations,
+              but crucially, each element follows the previous one.
+              This can create varied chain-reaction effects,
+              depending on your spring configuration.
+            </Text>
+          </View>
+          <AnimationCanvas>
+            {trailSpringStyles.map((style, i) => (
+              <AnimatedView key={i} style={[s.shapeE, s.m1, style]} />
+            ))}
+          </AnimationCanvas>
+          <ControlRow>
+            <Text>Toggle position</Text>
+            <Switch onValueChange={setIsTrailActive} value={isTrailActive} />
           </ControlRow>
         </Card>
 

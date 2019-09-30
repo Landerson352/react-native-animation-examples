@@ -18,6 +18,9 @@ const styles = StyleSheet.create({
   grow1: {
     flexGrow: 1,
   },
+  m1: {
+    margin: 4,
+  },
   m2: {
     margin: 8,
   },
@@ -53,6 +56,12 @@ const styles = StyleSheet.create({
     height: 80,
     width: 80,
     backgroundColor: 'deeppink',
+    borderRadius: 4,
+  },
+  shapeE: {
+    height: 8,
+    width: 24,
+    backgroundColor: 'aquamarine',
     borderRadius: 4,
   },
   pcontent: {
