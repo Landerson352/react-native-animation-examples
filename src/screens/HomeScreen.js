@@ -38,8 +38,9 @@ const renderItem = ({ item }) => (
 
 const header = (
   <Text p>
-    Here we demonstrate the key capabilities of various React Native animation libraries in the simplest way,
-    and give you clues and resources to dig deeper on the ones that are most applicable to your app.
+    Let's look at the various leading React Native animation libraries,
+    using simple demos to understand their key capabilities.
+    If you'd like to know more, follow the links on each screen to dig deeper.
   </Text>
 );
 

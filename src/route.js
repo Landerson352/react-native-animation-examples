@@ -40,8 +40,9 @@ const ROUTE = {
     infoUrl: 'https://airbnb.design/lottie/',
     github: 'react-native-community/lottie-react-native',
     npm: 'lottie-react-native',
-    description: 'Parses Adobe After Effects animations exported as JSON with bodymovin and renders them natively.'
-      + ' Supported by Expo. Otherwise, required linking.',
+    description: 'Lottie parses Adobe After Effects animations exported with Bodymovin, and renders them natively.'
+      + ' Animation speed and progress can be controlled programmatically.'
+      + ' Supported by Expo. Otherwise, requires linking.',
   },
   POSE: {
     title: 'Pose',
@@ -89,7 +90,7 @@ const ROUTE = {
     npm: 'react-native-shared-element',
     description: 'Shared Element provides primitives for transitioning elements between screens.'
       + ' Has bindings for React Navigation\'s StackNavigator.'
-      + ' Linking required (unlike FluidTransitions).'
+      + ' Linking requires (unlike FluidTransitions).'
       + ' Road-map to include appear/disappear transitions and Expo support.'
   },
 };
