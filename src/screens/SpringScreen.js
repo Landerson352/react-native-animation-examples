@@ -21,12 +21,26 @@ const EXAMPLE_1_STATE = {
   },
 };
 
+const EXAMPLE_2_STATE = {
+  VISIBLE: {
+    opacity: 1,
+    height: 80,
+    width: 80,
+  },
+  HIDDEN: {
+    opacity: 0,
+    height: 0,
+    width: 0,
+  },
+};
+
 const SPRING_CONFIG = {
   SPEEDY: { mass: 1, tension: 200, friction: 20 },
   LIVELY: { mass: 1, tension: 500, friction: 10 },
 };
 
 export default () => {
+  // Basic spring
   const [basicSpringStyles, setBasicSpringStyles] = useSpring(() => ({
     ...EXAMPLE_1_STATE.INACTIVE,
     config: SPRING_CONFIG.LIVELY,
@@ -37,6 +51,7 @@ export default () => {
     _setIsBasicActive(willBeActive);
   };
 
+  // Trail
   const [trailSpringStyles, setTrailSpringStyles] = useTrail(5,() => ({
     ...EXAMPLE_1_STATE.INACTIVE,
     config: SPRING_CONFIG.SPEEDY,
@@ -46,6 +61,14 @@ export default () => {
     setTrailSpringStyles(willBeActive ? EXAMPLE_1_STATE.ACTIVE : EXAMPLE_1_STATE.INACTIVE);
     _setIsTrailActive(willBeActive);
   };
+
+  // Transition
+  const [isVisible, setIsVisible] = useState(false);
+  const transitions = useTransition(isVisible, null, {
+    from: EXAMPLE_2_STATE.HIDDEN,
+    enter: EXAMPLE_2_STATE.VISIBLE,
+    leave: EXAMPLE_2_STATE.HIDDEN,
+  });
 
   return (
     <ScrollView>
@@ -88,6 +111,25 @@ export default () => {
           <ControlRow>
             <Text>Toggle position</Text>
             <Switch onValueChange={setIsTrailActive} value={isTrailActive} />
+          </ControlRow>
+        </Card>
+
+        <Card>
+          <View style={s.pcontent}>
+            <Text h3 style={s.mb2}>Enter/exit transitions</Text>
+            <Text>
+              A component with "enter" and "exit" states
+              will animate when the element is mounted and unmounted.
+            </Text>
+          </View>
+          <AnimationCanvas>
+            {transitions.map(({ item: isVisible, key, props: style }) => isVisible && (
+              <AnimatedView key={key} style={[s.shapeA, s.absolute, style]} />
+            ))}
+          </AnimationCanvas>
+          <ControlRow>
+            <Text>Toggle visibility</Text>
+            <Switch onValueChange={setIsVisible} value={isVisible} />
           </ControlRow>
         </Card>
 
