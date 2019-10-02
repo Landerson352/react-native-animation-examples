@@ -25,8 +25,10 @@ const ROUTE = {
     github: 'fram-x/FluidTransitions',
     npm: 'react-navigation-fluid-transitions',
     description: 'FluidTransitions animates elements between react-navigation screens.'
-      + ' Only supports react-navigation v3 and below.'
       + ' Supports shared elements, appear/disappear transitions, staggering, and custom transitions.'
+      + ' Only supports react-navigation v3 and below.'
+      + ' Because it uses its own "fluid navigator",'
+      + ' it does not integrate as smoothly with the StackNavigator header as Shared Element.'
       + ' No linking required (unlike Shared Element).'
   },
   FLUID_TRANSITIONS_MAIN: {},
@@ -91,7 +93,7 @@ const ROUTE = {
     description: 'Shared Element provides primitives for transitioning elements between screens.'
       + ' Has bindings for React Navigation\'s StackNavigator.'
       + ' Has Expo (SDK 35) support, otherwise requires linking (unlike FluidTransitions).'
-      + ' Road-map to include appear/disappear transitions and Expo support.'
+      + ' Road-map to include SwitchNavigator support and appear/disappear transitions.'
   },
 };
 
