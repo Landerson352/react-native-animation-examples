@@ -15,7 +15,7 @@ const menuRoutes = [
   ROUTE.POSE,
   // ROUTE.REACT_MOTION,
   ROUTE.REACT_SPRING,
-  ROUTE.REANIMATED,
+  // ROUTE.REANIMATED,
   // ROUTE.SHARED_ELEMENT,
 ];
 
@@ -45,7 +45,7 @@ const header = (
 );
 
 const HomeScreen = () => (
-  <View style={[s.bgAlmostWhite, s.flexGrow]}>
+  <View style={[s.bgAlmostWhite, s.grow1]}>
     <FlatList
       ListHeaderComponent={header}
       contentContainerStyle={s.pcontent}
