@@ -14,6 +14,15 @@ const RouteInfo = (props) => {
       <Text h1 p>{route.title}</Text>
 
       <Text p>{route.description}</Text>
+      {!!route.strengths && (
+        <Text p>👍 {route.strengths}</Text>
+      )}
+      {!!route.weaknesses && (
+        <Text p>👎 {route.weaknesses}</Text>
+      )}
+      {!!route.note && (
+        <Text p>🤔 {route.note}</Text>
+      )}
       {!!route.infoUrl && <Text style={s.mb1}>
         Info:
         {' '}
@@ -24,7 +33,7 @@ const RouteInfo = (props) => {
         {' '}
         <Text href={`https://github.com/${route.github}`}>{route.github}</Text>
       </Text>}
-      {!!route.npm && <Text p>
+      {!!route.npm && <Text style={s.mb1}>
         NPM:
         {' '}
         <Text href={`https://www.npmjs.com/package/${route.npm}`}>{route.npm}</Text>
