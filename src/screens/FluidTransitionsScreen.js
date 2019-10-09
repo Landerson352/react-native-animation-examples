@@ -1,10 +1,11 @@
 import React from 'react';
-import { Button, ScrollView, View } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import AnimationCanvas from '../components/AnimationCanvas';
 import Card from '../components/Card';
 import ControlRow from '../components/ControlRow';
 import { createFluidNavigator, Transition } from 'react-navigation-fluid-transitions';
 
+import Button from '../components/Button';
 import createRouteConfig from '../utils/createRouteConfig';
 import ExamplesContainer from '../components/ExamplesContainer';
 import ROUTE from '../route';
@@ -76,7 +77,7 @@ const Example1Screen = () => {
   const [{ goBack }] = useNavigation();
 
   return (
-    <ScrollView contentContainerStyle={[s.grow1, s.centerContent]}>
+    <ScrollView contentContainerStyle={[s.grow1, s.centerContentAndItems]}>
       <Transition shared={SHARED_ELEMENT.CIRCLE_BACKGROUND}>
         <View style={s.shapeC} />
       </Transition>
