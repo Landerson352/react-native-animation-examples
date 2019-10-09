@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import { Linking, StyleSheet, TouchableOpacity, View } from 'react-native';
 
 import s from '../styles';
 import Text from './Text';
@@ -15,10 +15,11 @@ const styles = StyleSheet.create({
 });
 
 const Button = (props) => {
-  const { onPress, style, title } = props;
+  const { href, onPress, style, title } = props;
+  const handlePress = (onPress || (href && Linking.openURL(href)));
 
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity onPress={handlePress}>
       <View style={[styles.container, style]}>
         <Text link>{title}</Text>
       </View>
