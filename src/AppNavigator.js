@@ -16,6 +16,7 @@ import ReanimatedScreen from './screens/ReanimatedScreen';
 import SharedElementScreen, { SharedElementExample1Screen } from './screens/SharedElementScreen';
 import SpringScreen from './screens/SpringScreen';
 
+// We use createSharedElementStackNavigator here because SharedElement works best with a single unified navigator.
 const AppNavigator = createSharedElementStackNavigator(createStackNavigator, {
   ...createRouteConfig(ROUTE.HOME, HomeScreen),
 
