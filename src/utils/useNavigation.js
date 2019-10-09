@@ -4,7 +4,7 @@ export default () => {
   const navigation = useNavigation();
   return [
     {
-      goBack: () => () => navigation.goBack(),
+      goBack: () => navigation.goBack(),
       navigate: (ROUTE, params) => () => navigation.navigate(ROUTE.key, params),
       push: (ROUTE, params) => () => navigation.push(ROUTE.key, params),
     },
