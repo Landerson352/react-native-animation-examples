@@ -33,7 +33,7 @@ const Example1Content = () => (
 );
 
 const MainScreen = () => {
-  const [,, handleNavigate]  = useNavigation();
+  const [, { navigate }] = useNavigation();
 
   return (
     <ScrollView>
@@ -49,7 +49,7 @@ const MainScreen = () => {
             </Transition>
           </AnimationCanvas>
           <ControlRow>
-            <Button title="See Example" onPress={handleNavigate(ROUTE.FLUID_TRANSITIONS_EXAMPLE_1)} />
+            <Button title="See Example" onPress={navigate(ROUTE.FLUID_TRANSITIONS_EXAMPLE_1)} />
           </ControlRow>
         </Card>
 
@@ -63,7 +63,7 @@ const MainScreen = () => {
             </Text>
           </View>
           <ControlRow>
-            <Button title="See Example" onPress={handleNavigate(ROUTE.FLUID_TRANSITIONS_EXAMPLE_2)} />
+            <Button title="See Example" onPress={navigate(ROUTE.FLUID_TRANSITIONS_EXAMPLE_2)} />
           </ControlRow>
         </Card>
 

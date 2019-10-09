@@ -2,12 +2,11 @@ import React from 'react';
 import { View } from 'react-native';
 
 import s from '../styles';
-import useNavigation from '../utils/useNavigation';
 import Text from '../components/Text';
+import useRoute from '../utils/useRoute';
 
 const RouteInfo = (props) => {
-  let [, navigationRoute] = useNavigation();
-  const { route = navigationRoute } = props;
+  const { route = useRoute() } = props;
 
   return (
     <View {...props}>

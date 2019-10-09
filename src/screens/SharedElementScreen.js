@@ -34,7 +34,7 @@ export const Example1Content = () => (
 );
 
 const SharedElementScreen = () => {
-  const [,, handleNavigate]  = useNavigation();
+  const [, { navigate }] = useNavigation();
 
   return (
     <ScrollView>
@@ -49,7 +49,7 @@ const SharedElementScreen = () => {
             </SharedElement>
           </AnimationCanvas>
           <ControlRow>
-            <Button title="See Example" onPress={handleNavigate(ROUTE.SHARED_ELEMENT_EXAMPLE_1)} />
+            <Button title="See Example" onPress={navigate(ROUTE.SHARED_ELEMENT_EXAMPLE_1)} />
           </ControlRow>
         </Card>
       </ExamplesContainer>

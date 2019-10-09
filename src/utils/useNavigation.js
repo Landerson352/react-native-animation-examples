@@ -1,20 +1,12 @@
-import { useContext } from 'react';
-import { NavigationContext } from 'react-navigation';
-import { get } from 'lodash';
+import { useNavigation } from 'react-navigation-hooks';
 
-import ROUTE from '../route';
-
-const useNavigation = () => {
-  const navigation = useContext(NavigationContext);
-
-  const routeName = get(navigation, 'state.routeName');
-  const route = ROUTE[routeName];
-
-  const handleNavigate = (ROUTE, params) => {
-    return () => navigation.navigate(ROUTE.key, params);
-  };
-
-  return [navigation, route, handleNavigate];
+export default () => {
+  const navigation = useNavigation();
+  return [
+    navigation,
+    {
+      navigate: (ROUTE, params) => () => navigation.navigate(ROUTE.key, params),
+      push: (ROUTE, params) => () => navigation.push(ROUTE.key, params),
+    },
+  ];
 };
-
-export default useNavigation;
