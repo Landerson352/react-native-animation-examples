@@ -40,7 +40,9 @@ const ROUTE = {
   FLUID_TRANSITIONS_EXAMPLE_2: {
     title: 'Example 2',
   },
-  HOME: {},
+  HOME: {
+    title: 'Animation Examples',
+  },
   LOTTIE: {
     title: 'Lottie',
     infoUrl: 'https://airbnb.design/lottie/',
