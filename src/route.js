@@ -34,11 +34,13 @@ const ROUTE = {
       + ' Uses its own "fluid navigator" instead of StackNavigator.',
   },
   FLUID_TRANSITIONS_MAIN: {},
-  FLUID_TRANSITIONS_EXAMPLE_1: {},
-  FLUID_TRANSITIONS_EXAMPLE_2: {},
-  HOME: {
-    title: 'Animation Examples',
+  FLUID_TRANSITIONS_EXAMPLE_1: {
+    title: 'Example 1',
   },
+  FLUID_TRANSITIONS_EXAMPLE_2: {
+    title: 'Example 2',
+  },
+  HOME: {},
   LOTTIE: {
     title: 'Lottie',
     infoUrl: 'https://airbnb.design/lottie/',
@@ -106,9 +108,15 @@ const ROUTE = {
     npm: 'react-native-shared-element',
     description: 'Shared Element provides primitives for transitioning elements between screens.',
     strengths: 'Has bindings for React Navigation\'s StackNavigator.'
+      + ' Support configuring transitions on each element.'
       + ' Has Expo (SDK 35) support.',
-    weaknesses: 'Without Expo 35, requires linking.',
+    weaknesses: 'Requires use of StackNavigator; may force you to structure your app in a certain way.'
+      + ' No support for appear/disappear transitions.'
+      + ' Without Expo 35, requires linking.',
     note: ' Road-map to include SwitchNavigator support and appear/disappear transitions.',
+  },
+  SHARED_ELEMENT_EXAMPLE_1: {
+    title: 'Example 1'
   },
 };
 
