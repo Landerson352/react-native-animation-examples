@@ -1,5 +1,9 @@
 import { StyleSheet } from 'react-native';
 
+const COLOR = {
+  BLUE: '#0071FF',
+};
+
 const styles = StyleSheet.create({
   absolute: {
     position: 'absolute',
@@ -9,7 +13,7 @@ const styles = StyleSheet.create({
     height: 160,
   },
   blue: {
-    color: '#0071FF',
+    color: COLOR.BLUE,
   },
   bgAlmostWhite: {
     backgroundColor: '#eee',
@@ -20,6 +24,12 @@ const styles = StyleSheet.create({
   bgWhite: {
     backgroundColor: '#fff',
   },
+  border1: {
+    borderWidth: 1,
+  },
+  borderBlue: {
+    borderColor: COLOR.BLUE,
+  },
   centerContent: {
     justifyContent: 'center',
   },
@@ -29,6 +39,9 @@ const styles = StyleSheet.create({
   },
   centerItems: {
     alignItems: 'center',
+  },
+  centerSelf: {
+    alignSelf: 'center',
   },
   fontWeightBold: {
     fontWeight: 'bold',
@@ -59,6 +72,18 @@ const styles = StyleSheet.create({
   },
   mb4: {
     marginBottom: 16,
+  },
+  mt1: {
+    marginTop: 4,
+  },
+  mt2: {
+    marginTop: 8,
+  },
+  mt3: {
+    marginTop: 12,
+  },
+  mt4: {
+    marginTop: 16,
   },
   muted: {
     color: '#888',
@@ -144,6 +169,10 @@ const styles = StyleSheet.create({
     width: 24,
     backgroundColor: 'aquamarine',
     borderRadius: 4,
+  },
+  shapeF: {
+    backgroundColor: 'aquamarine',
+    flexGrow: 1,
   },
   spaceBetweenContent: {
     justifyContent: 'space-between',
