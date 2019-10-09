@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { ScrollView, Switch, View } from 'react-native';
-import { animated, useSpring, useChain, useSprings, useTrail, useTransition } from 'react-spring';
+import { animated, useSpring, useTrail, useTransition } from 'react-spring';
+
 import AnimationCanvas from '../components/AnimationCanvas';
 import Card from '../components/Card';
 import ControlRow from '../components/ControlRow';
 import ExamplesContainer from '../components/ExamplesContainer';
-
 import RouteInfo from '../components/RouteInfo';
 import Text from '../components/Text';
 import s from '../styles';
