@@ -1,5 +1,6 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
 
 import createRouteConfig from './utils/createRouteConfig';
 import ROUTE from './route';
@@ -12,10 +13,10 @@ import LottieScreen from './screens/LottieScreen';
 import MotionScreen from './screens/MotionScreen';
 import PoseScreen from './screens/PoseScreen';
 import ReanimatedScreen from './screens/ReanimatedScreen';
-import SharedElementScreen from './screens/SharedElementScreen';
+import SharedElementScreen, { SharedElementExample1Screen } from './screens/SharedElementScreen';
 import SpringScreen from './screens/SpringScreen';
 
-const AppNavigator = createStackNavigator({
+const AppNavigator = createSharedElementStackNavigator(createStackNavigator, {
   ...createRouteConfig(ROUTE.HOME, HomeScreen),
 
   ...createRouteConfig(ROUTE.ANIMATABLE, AnimatableScreen),
@@ -28,6 +29,7 @@ const AppNavigator = createStackNavigator({
   ...createRouteConfig(ROUTE.REACT_SPRING, SpringScreen),
   ...createRouteConfig(ROUTE.REANIMATED, ReanimatedScreen),
   ...createRouteConfig(ROUTE.SHARED_ELEMENT, SharedElementScreen),
+  ...createRouteConfig(ROUTE.SHARED_ELEMENT_EXAMPLE_1, SharedElementExample1Screen),
 });
 
 export default createAppContainer(AppNavigator);
