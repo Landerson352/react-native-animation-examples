@@ -8,12 +8,9 @@ import useNavigation from '../utils/useNavigation';
 
 const menuRoutes = [
   ROUTE.ANIMATABLE,
-  // ROUTE.FIBER,
-  // ROUTE.FLARE,
   ROUTE.FLUID_TRANSITIONS,
   ROUTE.LOTTIE,
   ROUTE.POSE,
-  // ROUTE.REACT_MOTION,
   ROUTE.REACT_SPRING,
   ROUTE.REANIMATED,
   ROUTE.SHARED_ELEMENT,

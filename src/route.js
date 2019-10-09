@@ -10,19 +10,6 @@ const ROUTE = {
     strengths: 'One-off animation effects such as bounce or pulse are dead simple.',
     weaknesses: 'No spring physics, so interrupted transitions look bad.'
   },
-  FIBER: {
-    title: 'Fiber',
-    infoUrl: 'https://wcandillon.github.io/react-native-fiber/',
-    description: 'A paid React Native starter focused on animations inspired by Framer.',
-    weaknesses: 'A project starter, not technically an animation library.',
-  },
-  FLARE: {
-    title: 'Flare',
-    infoUrl: 'https://www.2dimensions.com/about-flare',
-    description: 'An animation tool that supports vector or raster, skeletons and mesh deformations,'
-      + ' inverse kinematics and more.',
-    weaknesses: 'Not yet integrated with React Native.',
-  },
   FLUID_TRANSITIONS: {
     title: 'FluidTransitions',
     github: 'fram-x/FluidTransitions',
@@ -71,15 +58,6 @@ const ROUTE = {
     note: 'From the makers of Framer. Pose has been succeeded by Framer Motion,'
       + ' but that does not support React Native yet.'
       + ' If it does in the future, expect Pose to be deprecated.',
-  },
-  REACT_MOTION: {
-    title: 'React Motion',
-    github: 'chenglou/react-motion',
-    npm: 'react-motion',
-    description: 'React Motion provides Primitives for driving animations with spring-based physics,'
-      + ' as opposed to defined curves and durations.'
-      + ' Support staggering & chaining animations, as well as mounting/unmounting transitions.',
-    weaknesses: 'Provides render-props only, not hooks',
   },
   REACT_SPRING: {
     title: 'React Spring',
