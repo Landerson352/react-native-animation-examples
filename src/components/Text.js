@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 });
 
 const AnimationCanvas = (props) => {
-  const { uppercase, muted, style, b, lg, lgr, lgst, h1, h2, h3, p, href, ...restProps } = props;
+  const { b, h1, h2, h3, href, lg, lgr, lgst, link, muted, p, style, uppercase, ...restProps } = props;
 
   return (
     <RNText
@@ -39,7 +39,7 @@ const AnimationCanvas = (props) => {
         (lg || h3) && styles.fontSizeLarge,
         (lgr || h2) && styles.fontSizeLarger,
         (lgst || h1) && styles.fontSizeLargest,
-        href && styles.link,
+        (link || href) && styles.link,
         uppercase && s.uppercase,
         muted && s.muted,
         style
