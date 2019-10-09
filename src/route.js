@@ -5,7 +5,7 @@ const ROUTE = {
     title: 'Animatable',
     github: 'oblador/react-native-animatable',
     npm: 'react-native-animatable',
-    description: 'Declarative transitions and animations.'
+    description: 'Animatable provides declarative transitions and animations.'
       + ' Supports duration, easing, key-framing. Comes with presets.',
     strengths: 'One-off animation effects such as bounce or pulse are dead simple.',
     weaknesses: 'No spring physics, so interrupted transitions look bad.'
@@ -100,7 +100,8 @@ const ROUTE = {
     github: 'kmagiera/react-native-reanimated',
     npm: 'react-native-reanimated',
     description: 'Reanimated is "React Native\'s Animated library reimplemented",'
-      + ' for better support of gesture-based interactions.',
+      + ' for better support of gesture-based interactions.'
+      + ' It can do everything Animated can do, and has some extra tools.',
     strengths: 'Provides logical "blocks" for building complex gesture-based interactions.',
     weaknesses: 'Very complex for simple effects that are not driven by gestures.',
   },
