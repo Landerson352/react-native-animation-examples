@@ -13,7 +13,7 @@ const RouteInfo = (props) => {
     <View {...props}>
       <Text h1 p>{route.title}</Text>
 
-      <Text p>{route.description}</Text>
+      <Text b p>{route.description}</Text>
       {!!route.strengths && (
         <Text p>👍 {route.strengths}</Text>
       )}
