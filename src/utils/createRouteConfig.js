@@ -1,8 +1,9 @@
-const createRouteConfig = ({ key, title }, screen) => ({
+const createRouteConfig = ({ key, title }, screen, navigationOptions = null) => ({
   [key]: {
     screen,
     navigationOptions: {
       title,
+      ...navigationOptions,
     },
   },
 });
