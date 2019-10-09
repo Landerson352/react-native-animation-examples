@@ -34,7 +34,7 @@ export const Example1Content = () => (
 );
 
 const SharedElementScreen = () => {
-  const [, { navigate }] = useNavigation();
+  const [{ navigate }] = useNavigation();
 
   return (
     <ScrollView>

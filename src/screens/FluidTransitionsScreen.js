@@ -33,7 +33,7 @@ const Example1Content = () => (
 );
 
 const MainScreen = () => {
-  const [, { navigate }] = useNavigation();
+  const [{ navigate }] = useNavigation();
 
   return (
     <ScrollView>
@@ -85,7 +85,7 @@ const Example1Screen = () => {
         <Example1Content />
       </View>
       <Transition appear="scale">
-        <Button title="More Examples" onPress={() => goBack()} />
+        <Button title="More Examples" onPress={goBack} />
       </Transition>
     </ScrollView>
   );
@@ -106,7 +106,7 @@ const Example2Screen = () => {
         <View style={[s.shapeD, s.mb4]} />
       </Transition>
       <Transition appear="bottom">
-        <Button title="More Examples" onPress={() => goBack()} />
+        <Button title="More Examples" onPress={goBack} />
       </Transition>
     </ScrollView>
   );

@@ -20,11 +20,11 @@ const menuRoutes = [
 ];
 
 const Item = ({ route }) => {
-  const { key, title } = route;
+  const { title } = route;
   const [{ navigate }] = useNavigation();
 
   return (
-    <TouchableOpacity onPress={() => navigate(key)}>
+    <TouchableOpacity onPress={navigate(route)}>
       <View style={[s.mb2, s.p4, s.bgWhite, s.rounded]}>
         <Text b>{title}</Text>
       </View>
