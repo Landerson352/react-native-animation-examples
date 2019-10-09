@@ -1,88 +1,57 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { ScrollView, Switch, View } from 'react-native';
-import Animated, { Easing } from 'react-native-reanimated';
+import React, { useRef } from 'react';
+import { View } from 'react-native';
+import Animated from 'react-native-reanimated';
+
 import AnimationCanvas from '../components/AnimationCanvas';
 import Card from '../components/Card';
-import ControlRow from '../components/ControlRow';
 import ExamplesContainer from '../components/ExamplesContainer';
-
-const {
-  set,
-  cond,
-  startClock,
-  stopClock,
-  clockRunning,
-  block,
-  timing,
-  debug,
-  Value,
-  Clock,
-  divide,
-  concat,
-} = Animated;
-
 import RouteInfo from '../components/RouteInfo';
-import Text from '../components/Text';
 import s from '../styles';
+import Text from '../components/Text';
 
-const runTiming = (clock, value, dest) => {
-  const state = {
-    finished: new Value(0),
-    position: new Value(0),
-    time: new Value(0),
-    frameTime: new Value(0),
-  };
-
-  const config = {
-    duration: 5000,
-    toValue: new Value(0),
-    easing: Easing.inOut(Easing.ease),
-  };
-
-  return block([
-    cond(clockRunning(clock), 0, [
-      set(state.finished, 0),
-      set(state.time, 0),
-      set(state.position, value),
-      set(state.frameTime, 0),
-      set(config.toValue, dest),
-      startClock(clock),
-    ]),
-    timing(clock, state, config),
-    cond(state.finished, debug('stop clock', stopClock(clock))),
-    state.position,
-  ]);
-};
+export const onScroll = (contentOffset) => Animated.event(
+  [{
+    nativeEvent: { contentOffset },
+  }],
+);
 
 const ReanimatedScreen = () => {
-  const trans = useRef(runTiming(new Clock(), 0, 360)).current;
-  const example1Style = { transform: [{ rotate: concat(trans, 'deg') }] };
+  // Note how these variables can be "locked in" with useRef.
+  // In other words, these animations are not driven by JS re-renders.
+  // Instead, you create the logical connections, then animations run natively.
+  const scrollPosition = useRef(new Animated.Value(0)).current;
+  const handleScroll = useRef(onScroll({ y: scrollPosition })).current;
+  const left = useRef(Animated.divide(scrollPosition, 2)).current;
+  const shapeStyle = useRef({ left }).current;
 
   return (
-    <ScrollView>
+    <Animated.ScrollView
+      onScroll={handleScroll}
+      scrollEventThrottle={1}
+      showsVerticalScrollIndicator={false}
+      style={s.grow1}
+    >
       <RouteInfo style={s.pcontent} />
 
       <ExamplesContainer>
 
         <Card>
           <View style={s.pcontent}>
-            <Text h3 style={s.mb2}>Example One</Text>
+            <Text h3 style={s.mb2}>Scroll tracking</Text>
             <Text>
-              ...
+              By mapping a scroll event to an Animated Value,
+              using Animated's operators to transform it,
+              and then assigning that Value in an Animated element's style,
+              you can control the position of an element with a scroll gesture.
             </Text>
           </View>
           <AnimationCanvas>
-            <Animated.View
-              style={[
-                s.shapeA,
-                example1Style,
-              ]}
-            />
+            <Animated.View style={[s.shapeA, s.absolute, shapeStyle]} />
           </AnimationCanvas>
         </Card>
 
       </ExamplesContainer>
-    </ScrollView>
+    </Animated.ScrollView>
   );
 };
 
