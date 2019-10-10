@@ -21,7 +21,7 @@ const ReanimatedScreen = () => {
   // Instead, you create the logical connections, then animations run natively.
   const scrollPosition = useRef(new Animated.Value(0)).current;
   const handleScroll = useRef(onScroll({ y: scrollPosition })).current;
-  const left = useRef(Animated.divide(scrollPosition, 2)).current;
+  const left = useRef(Animated.sub(scrollPosition, 280)).current;
   const shapeStyle = useRef({ left }).current;
 
   return (
