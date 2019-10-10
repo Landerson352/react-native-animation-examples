@@ -10,6 +10,14 @@ const ROUTE = {
     strengths: 'One-off animation effects such as bounce or pulse are dead simple.',
     weaknesses: 'No spring physics, so interrupted transitions look bad.'
   },
+  ANIMATED_SPRITE: {
+    title: 'Animated Sprite',
+    github: 'micahrye/react-native-animated-sprite',
+    npm: 'react-native-animated-sprite',
+    description: 'Animated Sprite supports animation, tweening, and dragging sprites.',
+    strengths: 'Perfect for building sprite-based games in React Native',
+    weaknesses: 'If you don\'t have sprite artwork, this is useless.',
+  },
   FLUID_TRANSITIONS: {
     title: 'FluidTransitions',
     github: 'fram-x/FluidTransitions',
@@ -29,6 +37,16 @@ const ROUTE = {
   },
   HOME: {
     title: 'Animation Examples',
+  },
+  INTERACTABLE: {
+    title: 'Interactable',
+    github: 'wix/react-native-interactable',
+    npm: 'react-native-interactable',
+    description: 'Interactable is an experimental way to handle continuous fluid interactions.'
+    + ' For example: a swipeable card, a drawer, or collapsible header.',
+    strengths: 'More declarative than other gesture-handling solutions.',
+    weaknesses: 'Preset parameters may be limiting, depending on your needs.',
+    note: 'From the makers of Wix, this project is seeking maintainers who have more time.'
   },
   LOTTIE: {
     title: 'Lottie',
@@ -82,6 +100,7 @@ const ROUTE = {
       + ' It can do everything Animated can do, and has some extra tools.',
     strengths: 'Provides logical "blocks" for building complex gesture-based interactions.',
     weaknesses: 'Very complex for simple effects that are not driven by gestures.',
+    note: 'This method is used extensively in William Candillon\'s "Can it Be Done in React Native" videos. ',
   },
   SHARED_ELEMENT: {
     title: 'Shared Element',
