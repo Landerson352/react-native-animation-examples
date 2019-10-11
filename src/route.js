@@ -15,8 +15,9 @@ const ROUTE = {
     github: 'micahrye/react-native-animated-sprite',
     npm: 'react-native-animated-sprite',
     description: 'Animated Sprite supports animation, tweening, and dragging sprites.',
-    strengths: 'Perfect for building sprite-based games in React Native',
-    weaknesses: 'If you don\'t have sprite artwork, this is useless.',
+    strengths: 'Great for building sprite-based animations for games',
+    weaknesses: 'Requires each frame to be a separate image.'
+      + ' If you don\'t have sprite artwork, this library will be useless.',
   },
   FLUID_TRANSITIONS: {
     title: 'FluidTransitions',
