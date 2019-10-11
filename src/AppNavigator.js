@@ -5,6 +5,7 @@ import { createSharedElementStackNavigator } from 'react-navigation-shared-eleme
 import createRouteConfig from './utils/createRouteConfig';
 import ROUTE from './route';
 import AnimatableScreen from './screens/AnimatableScreen';
+import AnimatedSpriteScreen from './screens/AnimatedSpriteScreen';
 import FluidTransitionsScreen from './screens/FluidTransitionsScreen';
 import HomeScreen from './screens/HomeScreen';
 import LottieScreen from './screens/LottieScreen';
@@ -18,6 +19,7 @@ const AppNavigator = createSharedElementStackNavigator(createStackNavigator, {
   ...createRouteConfig(ROUTE.HOME, HomeScreen),
 
   ...createRouteConfig(ROUTE.ANIMATABLE, AnimatableScreen),
+  ...createRouteConfig(ROUTE.ANIMATED_SPRITE, AnimatedSpriteScreen),
   ...createRouteConfig(ROUTE.FLUID_TRANSITIONS, FluidTransitionsScreen),
   ...createRouteConfig(ROUTE.LOTTIE, LottieScreen),
   ...createRouteConfig(ROUTE.POSE, PoseScreen),
