@@ -98,7 +98,7 @@ const ROUTE = {
     description: 'Reanimated is "React Native\'s Animated library reimplemented",'
       + ' for better support of gesture-based interactions.'
       + ' It can do everything Animated can do, and has some extra tools.',
-    strengths: 'Provides logical "blocks" for building complex gesture-based interactions.',
+    strengths: 'Provides logical "nodes & blocks" for building complex gesture-based interactions.',
     weaknesses: 'Very complex for simple effects that are not driven by gestures.',
     note: 'This method is used extensively in William Candillon\'s "Can it Be Done in React Native" videos. ',
   },

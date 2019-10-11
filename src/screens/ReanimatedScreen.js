@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { View } from 'react-native';
-import Animated from 'react-native-reanimated';
+import Reanimated from 'react-native-reanimated';
 
 import AnimationCanvas from '../components/AnimationCanvas';
 import Card from '../components/Card';
@@ -9,23 +9,29 @@ import RouteInfo from '../components/RouteInfo';
 import s from '../styles';
 import Text from '../components/Text';
 
-export const onScroll = (contentOffset) => Animated.event(
-  [{
-    nativeEvent: { contentOffset },
-  }],
-);
-
 const ReanimatedScreen = () => {
-  // Note how these variables can be "locked in" with useRef.
+  // Note how these variables can be "locked in" with useRef (this is not required).
   // In other words, these animations are not driven by JS re-renders.
-  // Instead, you create the logical connections, then animations run natively.
-  const scrollPosition = useRef(new Animated.Value(0)).current;
-  const handleScroll = useRef(onScroll({ y: scrollPosition })).current;
-  const left = useRef(Animated.sub(scrollPosition, 280)).current;
-  const shapeStyle = useRef({ left }).current;
+  // Instead, you create the connections between logical "nodes", then animations run natively.
+
+  // Example 1: Scroll tracking
+  const scrollPosition = useRef(new Reanimated.Value(0)).current;
+  const handleScroll = useRef(Reanimated.event([{
+    nativeEvent: { contentOffset: { y: scrollPosition } },
+  }])).current;
+  const left = useRef(Reanimated.sub(scrollPosition, 280)).current;
+  const example1ShapeStyle = useRef({ left }).current;
+
+  // Example 2: Clock-based animation
+  const clock = useRef(new Reanimated.Clock()).current;
+  const rotate = useRef(Reanimated.concat(Reanimated.divide(clock, 4), 'deg')).current;
+  const example2ShapeStyle = useRef({ transform: [{ rotate }] }).current;
+  Reanimated.useCode(Reanimated.block([
+    Reanimated.startClock(clock),
+  ]), [clock]);
 
   return (
-    <Animated.ScrollView
+    <Reanimated.ScrollView
       onScroll={handleScroll}
       scrollEventThrottle={1}
       showsVerticalScrollIndicator={false}
@@ -39,19 +45,32 @@ const ReanimatedScreen = () => {
           <View style={s.pcontent}>
             <Text h3 style={s.mb2}>Scroll tracking</Text>
             <Text>
-              By mapping a scroll event to an Animated Value,
-              using Animated's operators to transform it,
-              and then assigning that Value in an Animated element's style,
+              By mapping a scroll event to an Reanimated Value,
+              using Reanimated's operators to transform it,
+              and then assigning that Value in an Reanimated element's style,
               you can control the position of an element with a scroll gesture.
             </Text>
           </View>
           <AnimationCanvas>
-            <Animated.View style={[s.shapeA, s.absolute, shapeStyle]} />
+            <Reanimated.View style={[s.shapeA, s.absolute, example1ShapeStyle]} />
+          </AnimationCanvas>
+        </Card>
+
+        <Card>
+          <View style={s.pcontent}>
+            <Text h3 style={s.mb2}>Clock-based animation</Text>
+            <Text>
+              By starting a "clock" and driving a rotation transform off of it,
+              You can achieve an infinitely spinning element.
+            </Text>
+          </View>
+          <AnimationCanvas>
+            <Reanimated.View style={[s.shapeA, example2ShapeStyle]} />
           </AnimationCanvas>
         </Card>
 
       </ExamplesContainer>
-    </Animated.ScrollView>
+    </Reanimated.ScrollView>
   );
 };
 
