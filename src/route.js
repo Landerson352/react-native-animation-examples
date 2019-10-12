@@ -39,16 +39,6 @@ const ROUTE = {
   HOME: {
     title: 'Animation Examples',
   },
-  INTERACTABLE: {
-    title: 'Interactable',
-    github: 'wix/react-native-interactable',
-    npm: 'react-native-interactable',
-    description: 'Interactable is an experimental way to handle continuous fluid interactions.'
-    + ' For example: a swipeable card, a drawer, or collapsible header.',
-    strengths: 'More declarative than other gesture-handling solutions.',
-    weaknesses: 'Preset parameters may be limiting, depending on your needs.',
-    note: 'From the makers of Wix, this project is seeking maintainers who have more time.'
-  },
   LOTTIE: {
     title: 'Lottie',
     infoUrl: 'https://airbnb.design/lottie/',
