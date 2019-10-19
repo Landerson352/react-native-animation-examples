@@ -21,6 +21,15 @@ const styles = StyleSheet.create({
   bgBlack: {
     backgroundColor: '#000',
   },
+  bgGold: {
+    backgroundColor: 'gold',
+  },
+  bgAqua: {
+    backgroundColor: 'aquamarine',
+  },
+  bgPink: {
+    backgroundColor: 'deeppink',
+  },
   bgWhite: {
     backgroundColor: '#fff',
   },
