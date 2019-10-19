@@ -8,6 +8,7 @@ import AnimatableScreen from './screens/AnimatableScreen';
 import AnimatedSpriteScreen from './screens/AnimatedSpriteScreen';
 import FluidTransitionsScreen from './screens/FluidTransitionsScreen';
 import HomeScreen from './screens/HomeScreen';
+import LayoutAnimationScreen from './screens/LayoutAnimationScreen';
 import LottieScreen from './screens/LottieScreen';
 import PoseScreen from './screens/PoseScreen';
 import ReanimatedScreen from './screens/ReanimatedScreen';
@@ -21,6 +22,7 @@ const AppNavigator = createSharedElementStackNavigator(createStackNavigator, {
   ...createRouteConfig(ROUTE.ANIMATABLE, AnimatableScreen),
   ...createRouteConfig(ROUTE.ANIMATED_SPRITE, AnimatedSpriteScreen),
   ...createRouteConfig(ROUTE.FLUID_TRANSITIONS, FluidTransitionsScreen),
+  ...createRouteConfig(ROUTE.LAYOUT_ANIMATION, LayoutAnimationScreen),
   ...createRouteConfig(ROUTE.LOTTIE, LottieScreen),
   ...createRouteConfig(ROUTE.POSE, PoseScreen),
   ...createRouteConfig(ROUTE.REACT_SPRING, SpringScreen),

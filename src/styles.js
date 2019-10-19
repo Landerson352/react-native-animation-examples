@@ -174,6 +174,12 @@ const styles = StyleSheet.create({
     backgroundColor: 'aquamarine',
     flexGrow: 1,
   },
+  shapeG: {
+    height: 16,
+    width: 16,
+    backgroundColor: 'aquamarine',
+    borderRadius: 4,
+  },
   spaceBetweenContent: {
     justifyContent: 'space-between',
   },
