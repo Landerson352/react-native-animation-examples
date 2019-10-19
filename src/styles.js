@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
   },
   shapeG: {
     height: 16,
-    width: 16,
+    width: 32,
     backgroundColor: 'aquamarine',
     borderRadius: 4,
   },
