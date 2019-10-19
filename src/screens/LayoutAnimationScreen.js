@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { LayoutAnimation, Platform, ScrollView, StyleSheet, View } from 'react-native';
 import { map, times } from 'lodash';
+import { usePrevious } from 'state-hooks';
 
-import AnimationCanvas from '../components/AnimationCanvas';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import ControlRow from '../components/ControlRow';
@@ -11,29 +11,40 @@ import RouteInfo from '../components/RouteInfo';
 import Text from '../components/Text';
 import s from '../styles';
 
-const SHAPE_COLORS = [
-  'aquamarine',
-  'deeppink',
-  'gold',
-];
-
-// Note that in order to get this to work on Android
-//   you need to set the following flags via UIManager:
+// Note that in order to get this to work on Android,
+//   you need to set the following flags via UIManager once in your app:
 if (Platform.OS === 'android') {
   if (UIManager.setLayoutAnimationEnabledExperimental) {
     UIManager.setLayoutAnimationEnabledExperimental(true);
   }
 }
 
+const FLEX_SHAPE_STYLE = [
+  s.bgAqua,
+  s.bgPink,
+  s.bgGold,
+];
+
+// While this hook is not required, it may simplify the process
+//  of triggering a new LayoutAnimation update when values change between renders.
+//  See Example 2 for usage.
+const useLayoutAnimation = (value, config = LayoutAnimation.Presets.easeInEaseOut) => {
+  const string = JSON.stringify(value);
+  const previousString = usePrevious(string);
+  if (previousString !== string) {
+    LayoutAnimation.configureNext(config);
+  }
+};
+
 // TODO: refactor container style names
 const styles = StyleSheet.create({
-  shapeContainer1: {
+  example1Container: {
     ...s.bgBlack,
     ...s.pcontent,
     ...s.row,
     ...s.wrap,
   },
-  shapeContainer2: {
+  example2Container: {
     ...s.bgBlack,
     ...s.p1,
     ...s.row,
@@ -42,7 +53,10 @@ const styles = StyleSheet.create({
 });
 
 export default () => {
+  // Example 1: Flex grow
   const [shapeFlexes, _setShapeFlexes] = useState([1, 1, 1]);
+  // Here, we create a function which prepares the LayoutAnimation,
+  //  then changes the actual state value.
   const setShapeFlexes = (value) => {
     LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
     _setShapeFlexes(value);
@@ -55,11 +69,10 @@ export default () => {
     ]);
   };
 
-  const [shapeCount, _setShapeCount] = useState(12);
-  const setShapeCount = (value) => {
-    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
-    _setShapeCount(value);
-  };
+  // Example 2: Mount/unmount
+  const [shapeCount, setShapeCount] = useState(12);
+  // Here, we leverage our custom hook instead of calling LayoutAnimation imperatively.
+  useLayoutAnimation(shapeCount);
   const removeShape = () => setShapeCount(n => Math.max(n - 1, 0));
   const addShape = () => setShapeCount(n => n + 1);
 
@@ -77,9 +90,9 @@ export default () => {
               as long as LayoutAnimation.configureNext is called before the next render.
             </Text>
           </View>
-          <View style={styles.shapeContainer2}>
+          <View style={styles.example2Container}>
             {map(shapeFlexes, (flexGrow, i) => (
-              <View key={i} style={[s.m1, s.rounded, { backgroundColor: SHAPE_COLORS[i], flexGrow }]} />
+              <View key={i} style={[s.m1, s.rounded, FLEX_SHAPE_STYLE[i], { flexGrow }]} />
             ))}
           </View>
           <ControlRow>
@@ -95,7 +108,7 @@ export default () => {
               Note that the containing and sibling elements are transitioned as well.
             </Text>
           </View>
-          <View style={styles.shapeContainer1}>
+          <View style={styles.example1Container}>
             {times(shapeCount, (i) => (
               <View key={i} style={[s.shapeG, s.m1]} />
             ))}
