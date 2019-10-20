@@ -192,6 +192,15 @@ const styles = StyleSheet.create({
   spaceBetweenContent: {
     justifyContent: 'space-between',
   },
+  textAqua: {
+    color: 'aquamarine',
+  },
+  textGold: {
+    color: 'gold',
+  },
+  textPink: {
+    color: 'deeppink',
+  },
   uppercase: {
     textTransform: 'uppercase',
   },

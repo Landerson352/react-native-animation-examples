@@ -40,7 +40,6 @@ const useLayoutAnimation = (value, config = 'easeInEaseOut') => {
   }
 };
 
-// TODO: refactor container style names
 const styles = StyleSheet.create({
   example1Container: {
     ...s.bgBlack,
