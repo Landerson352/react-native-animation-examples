@@ -28,11 +28,15 @@ const FLEX_SHAPE_STYLE = [
 // While this hook is not required, it may simplify the process
 //  of triggering a new LayoutAnimation update when values change between renders.
 //  See Example 2 for usage.
-const useLayoutAnimation = (value, config = LayoutAnimation.Presets.easeInEaseOut) => {
+const useLayoutAnimation = (value, config = 'easeInEaseOut') => {
   const string = JSON.stringify(value);
   const previousString = usePrevious(string);
   if (previousString !== string) {
-    LayoutAnimation.configureNext(config);
+    if (typeof config === 'string') {
+      LayoutAnimation[config]();
+    } else {
+      LayoutAnimation.configureNext(config);
+    }
   }
 };
 
@@ -58,7 +62,7 @@ export default () => {
   // Here, we create a function which prepares the LayoutAnimation,
   //  then changes the actual state value.
   const setShapeFlexes = (value) => {
-    LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
+    LayoutAnimation.spring();
     _setShapeFlexes(value);
   };
   const randomizeShapeFlexes = () => {
@@ -87,7 +91,7 @@ export default () => {
             <Text h3 style={s.mb2}>Flex grow</Text>
             <Text>
               Elements whose flex style changes will be transitioned
-              as long as LayoutAnimation.configureNext is called before the next render.
+              as long as LayoutAnimation is called before the next render.
             </Text>
           </View>
           <View style={styles.example2Container}>
