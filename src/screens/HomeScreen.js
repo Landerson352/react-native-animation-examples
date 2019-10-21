@@ -37,7 +37,7 @@ const renderItem = ({ item }) => (
 
 const header = (
   <Text p>
-    Let's look at the various leading React Native animation libraries,
+    Let's look at the various leading React Native animation APIs & libraries,
     using simple demos to understand their key capabilities.
     If you'd like to know more, follow the links on each screen to dig deeper.
   </Text>

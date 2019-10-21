@@ -74,7 +74,8 @@ const ReanimatedScreen = () => {
           <View style={s.pcontent}>
             <Text h3 style={s.mb2}>SVG path morphing</Text>
             <Text>
-              With the Redash library, you can interpolate SVG path data, and more.
+              With William Candillon's "Redash" library,
+              you can interpolate SVG path data, and much more.
             </Text>
           </View>
           <AnimationCanvas>
