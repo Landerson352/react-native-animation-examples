@@ -9,6 +9,8 @@ import RouteInfo from '../components/RouteInfo';
 import Text from '../components/Text';
 import s from '../styles';
 
+// Note: For smoother playback, preload your sprite assets.
+
 const AnimatedSpriteScreen = () => {
   const cheetahSpriteProps = useRef({
     sprite: {
