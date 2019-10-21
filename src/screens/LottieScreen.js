@@ -13,7 +13,7 @@ const EXAMPLE_BODYMOVIN_DATA = require('../../assets/example-bodymovin-data.json
 
 const styles = StyleSheet.create({
   example1AnimationCanvas: {
-    backgroundColor: 'rgb(0, 218, 98)',
+    backgroundColor: 'rgb(88, 214, 112)',
   },
 });
 
