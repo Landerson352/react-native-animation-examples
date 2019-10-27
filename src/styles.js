@@ -139,6 +139,9 @@ const styles = StyleSheet.create({
   py4: {
     paddingVertical: 16,
   },
+  relative: {
+    position: 'relative',
+  },
   rounded: {
     borderRadius: 4,
   },
