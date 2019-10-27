@@ -8,8 +8,8 @@ import Text from '../components/Text';
 
 const { event, interpolate, Value } = Reanimated;
 
-const IMAGE_SOURCE = { uri: 'https://placebear.com/300/170' };
-const IMAGE_HEIGHT = 170;
+const IMAGE_SOURCE = { uri: 'https://placebear.com/640/360' };
+const IMAGE_HEIGHT = 180;
 
 const styles = StyleSheet.create({
   imageContainer: {
