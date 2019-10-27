@@ -19,6 +19,9 @@ const ROUTE = {
     weaknesses: 'Requires each frame to be a separate image.'
       + ' If you don\'t have sprite artwork, this library will be useless.',
   },
+  APIS_AND_LIBRARIES: {
+    title: 'Apis & Libraries',
+  },
   FLUID_TRANSITIONS: {
     title: 'FluidTransitions',
     github: 'fram-x/FluidTransitions',
