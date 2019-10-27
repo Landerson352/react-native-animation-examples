@@ -8,6 +8,12 @@ const styles = StyleSheet.create({
   absolute: {
     position: 'absolute',
   },
+  alignSelfCenter: {
+    alignSelf: 'center',
+  },
+  alignSelfStart: {
+    alignSelf: 'flex-start',
+  },
   animationCanvas: {
     backgroundColor: 'black',
     height: 160,
