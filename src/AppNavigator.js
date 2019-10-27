@@ -8,6 +8,7 @@ import AnimatableScreen from './screens/AnimatableScreen';
 import AnimatedSpriteScreen from './screens/AnimatedSpriteScreen';
 import ApisAndLibrariesScreen from './screens/ApisAndLibrariesScreen';
 import DesignPatternsScreen from './screens/DesignPatternsScreen';
+import FadeInImageScreen from './screens/FadeInImageScreen';
 import HeroImageScreen from './screens/HeroImageScreen';
 import FluidTransitionsScreen from './screens/FluidTransitionsScreen';
 import HomeScreen from './screens/HomeScreen';
@@ -36,6 +37,7 @@ const AppNavigator = createSharedElementStackNavigator(createStackNavigator, {
   ...createRouteConfig(ROUTE.SHARED_ELEMENT, SharedElementScreen),
   ...createRouteConfig(ROUTE.SHARED_ELEMENT_EXAMPLE_1, SharedElementExample1Screen),
 
+  ...createRouteConfig(ROUTE.FADE_IN_IMAGE, FadeInImageScreen),
   ...createRouteConfig(ROUTE.HERO_IMAGE, HeroImageScreen),
 });
 

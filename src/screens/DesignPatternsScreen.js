@@ -7,6 +7,7 @@ import Text from '../components/Text';
 import useNavigation from '../utils/useNavigation';
 
 const menuRoutes = [
+  ROUTE.FADE_IN_IMAGE,
   ROUTE.HERO_IMAGE,
 ];
 
@@ -29,8 +30,10 @@ const renderItem = ({ item }) => (
 
 const header = (
   <Text p>
-    Let's look at the some more complex effects you might want in implement,
-    and how you can achieve them in React Native.
+    Let's look at the some effects you might want in implement,
+    and how you might achieve them in React Native.
+    Note that these are not specific to any library,
+    so there may be more than one way to do it!
   </Text>
 );
 

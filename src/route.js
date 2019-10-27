@@ -25,8 +25,8 @@ const ROUTE = {
   DESIGN_PATTERNS: {
     title: 'Design Patterns',
   },
-  HERO_IMAGE: {
-    title: 'Hero Image',
+  FADE_IN_IMAGE: {
+    title: 'Fade in Image',
   },
   FLUID_TRANSITIONS: {
     title: 'FluidTransitions',
@@ -44,6 +44,9 @@ const ROUTE = {
   },
   FLUID_TRANSITIONS_EXAMPLE_2: {
     title: 'Example 2',
+  },
+  HERO_IMAGE: {
+    title: 'Hero Image',
   },
   HOME: {
     title: 'Animation Examples',
