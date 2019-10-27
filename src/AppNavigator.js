@@ -8,6 +8,7 @@ import AnimatableScreen from './screens/AnimatableScreen';
 import AnimatedSpriteScreen from './screens/AnimatedSpriteScreen';
 import ApisAndLibrariesScreen from './screens/ApisAndLibrariesScreen';
 import DesignPatternsScreen from './screens/DesignPatternsScreen';
+import HeroImageScreen from './screens/HeroImageScreen';
 import FluidTransitionsScreen from './screens/FluidTransitionsScreen';
 import HomeScreen from './screens/HomeScreen';
 import LayoutAnimationScreen from './screens/LayoutAnimationScreen';
@@ -34,6 +35,8 @@ const AppNavigator = createSharedElementStackNavigator(createStackNavigator, {
   ...createRouteConfig(ROUTE.REANIMATED, ReanimatedScreen),
   ...createRouteConfig(ROUTE.SHARED_ELEMENT, SharedElementScreen),
   ...createRouteConfig(ROUTE.SHARED_ELEMENT_EXAMPLE_1, SharedElementExample1Screen),
+
+  ...createRouteConfig(ROUTE.HERO_IMAGE, HeroImageScreen),
 });
 
 export default createAppContainer(AppNavigator);

@@ -25,6 +25,9 @@ const ROUTE = {
   DESIGN_PATTERNS: {
     title: 'Design Patterns',
   },
+  HERO_IMAGE: {
+    title: 'Hero Image',
+  },
   FLUID_TRANSITIONS: {
     title: 'FluidTransitions',
     github: 'fram-x/FluidTransitions',
