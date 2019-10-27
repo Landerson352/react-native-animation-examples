@@ -7,6 +7,7 @@ import ROUTE from './route';
 import AnimatableScreen from './screens/AnimatableScreen';
 import AnimatedSpriteScreen from './screens/AnimatedSpriteScreen';
 import ApisAndLibrariesScreen from './screens/ApisAndLibrariesScreen';
+import DesignPatternsScreen from './screens/DesignPatternsScreen';
 import FluidTransitionsScreen from './screens/FluidTransitionsScreen';
 import HomeScreen from './screens/HomeScreen';
 import LayoutAnimationScreen from './screens/LayoutAnimationScreen';
@@ -21,6 +22,8 @@ const AppNavigator = createSharedElementStackNavigator(createStackNavigator, {
   ...createRouteConfig(ROUTE.HOME, HomeScreen),
 
   ...createRouteConfig(ROUTE.APIS_AND_LIBRARIES, ApisAndLibrariesScreen),
+  ...createRouteConfig(ROUTE.DESIGN_PATTERNS, DesignPatternsScreen),
+
   ...createRouteConfig(ROUTE.ANIMATABLE, AnimatableScreen),
   ...createRouteConfig(ROUTE.ANIMATED_SPRITE, AnimatedSpriteScreen),
   ...createRouteConfig(ROUTE.FLUID_TRANSITIONS, FluidTransitionsScreen),

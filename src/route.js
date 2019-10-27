@@ -22,6 +22,9 @@ const ROUTE = {
   APIS_AND_LIBRARIES: {
     title: 'Apis & Libraries',
   },
+  DESIGN_PATTERNS: {
+    title: 'Design Patterns',
+  },
   FLUID_TRANSITIONS: {
     title: 'FluidTransitions',
     github: 'fram-x/FluidTransitions',
