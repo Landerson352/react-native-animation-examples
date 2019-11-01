@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Reanimated from 'react-native-reanimated';
 
@@ -24,11 +24,11 @@ const styles = StyleSheet.create({
 });
 
 const HeroImageScreen = () => {
-  const scrollPosition = useRef(new Value(0)).current;
-  const handleScroll = useRef(event([{
+  const scrollPosition = new Value(0);
+  const handleScroll = event([{
     nativeEvent: { contentOffset: { y: scrollPosition } },
-  }])).current;
-  const imageStyle = useRef({
+  }]);
+  const imageStyle = {
     height: interpolate(scrollPosition, {
       inputRange: [0, IMAGE_HEIGHT],
       outputRange: [IMAGE_HEIGHT, 0],
@@ -37,7 +37,7 @@ const HeroImageScreen = () => {
       inputRange: [0, IMAGE_HEIGHT],
       outputRange: [1, 0],
     }),
-  }).current;
+  };
 
   return (
     <Reanimated.ScrollView
