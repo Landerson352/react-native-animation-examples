@@ -14,6 +14,7 @@ import FluidTransitionsScreen from './screens/FluidTransitionsScreen';
 import HomeScreen from './screens/HomeScreen';
 import LayoutAnimationScreen from './screens/LayoutAnimationScreen';
 import LottieScreen from './screens/LottieScreen';
+import ParallaxImageScreen from './screens/ParallaxImageScreen';
 import PoseScreen from './screens/PoseScreen';
 import ReanimatedScreen from './screens/ReanimatedScreen';
 import SharedElementScreen, { SharedElementExample1Screen } from './screens/SharedElementScreen';
@@ -39,6 +40,7 @@ const AppNavigator = createSharedElementStackNavigator(createStackNavigator, {
 
   ...createRouteConfig(ROUTE.FADE_IN_IMAGE, FadeInImageScreen),
   ...createRouteConfig(ROUTE.HERO_IMAGE, HeroImageScreen),
+  ...createRouteConfig(ROUTE.PARALLAX_IMAGE, ParallaxImageScreen),
 });
 
 export default createAppContainer(AppNavigator);

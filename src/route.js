@@ -71,6 +71,9 @@ const ROUTE = {
     weaknesses: 'Depends entirely on Adobe After Effects.'
       + ' Without Expo, it requires linking.',
   },
+  PARALLAX_IMAGE: {
+    title: 'Parallax Image',
+  },
   POSE: {
     title: 'Pose',
     infoUrl: 'https://popmotion.io/pose/',

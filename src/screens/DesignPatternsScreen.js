@@ -9,6 +9,7 @@ import useNavigation from '../utils/useNavigation';
 const menuRoutes = [
   ROUTE.FADE_IN_IMAGE,
   ROUTE.HERO_IMAGE,
+  ROUTE.PARALLAX_IMAGE,
 ];
 
 const Item = ({ route }) => {
