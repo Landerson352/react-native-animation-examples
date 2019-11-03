@@ -23,6 +23,7 @@
     "react-native-redash": "5.1.x",
     "react-native-shared-element": "0.5.x",
     "react-native-svg": "~9.9.2",
+    "react-native-svg-animations": "^0.1.8",
     "react-native-web": "0.11.x",
     "react-navigation": "4.0.x",
     "react-navigation-fluid-transitions": "0.3.x",

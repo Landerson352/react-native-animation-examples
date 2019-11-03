@@ -16,6 +16,7 @@ const menuRoutes = [
   ROUTE.REACT_SPRING,
   ROUTE.REANIMATED,
   ROUTE.SHARED_ELEMENT,
+  ROUTE.SVG_ANIMATIONS,
 ];
 
 const Item = ({ route }) => {

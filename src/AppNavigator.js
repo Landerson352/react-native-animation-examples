@@ -19,6 +19,7 @@ import PoseScreen from './screens/PoseScreen';
 import ReanimatedScreen from './screens/ReanimatedScreen';
 import SharedElementScreen, { SharedElementExample1Screen } from './screens/SharedElementScreen';
 import SpringScreen from './screens/SpringScreen';
+import SvgAnimationsScreen from './screens/SvgAnimationsScreen';
 
 // We use createSharedElementStackNavigator here because SharedElement works best with a single unified navigator.
 const AppNavigator = createSharedElementStackNavigator(createStackNavigator, {
@@ -37,6 +38,7 @@ const AppNavigator = createSharedElementStackNavigator(createStackNavigator, {
   ...createRouteConfig(ROUTE.REANIMATED, ReanimatedScreen),
   ...createRouteConfig(ROUTE.SHARED_ELEMENT, SharedElementScreen),
   ...createRouteConfig(ROUTE.SHARED_ELEMENT_EXAMPLE_1, SharedElementExample1Screen),
+  ...createRouteConfig(ROUTE.SVG_ANIMATIONS, SvgAnimationsScreen),
 
   ...createRouteConfig(ROUTE.FADE_IN_IMAGE, FadeInImageScreen),
   ...createRouteConfig(ROUTE.HERO_IMAGE, HeroImageScreen),

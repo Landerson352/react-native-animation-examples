@@ -132,6 +132,15 @@ const ROUTE = {
   SHARED_ELEMENT_EXAMPLE_1: {
     title: 'Example 1'
   },
+  SVG_ANIMATIONS: {
+    title: 'SVG Animations',
+    github: '73R3WY/react-native-svg-animations',
+    npm: 'react-native-svg-animations',
+    description: 'SVG Animations will trace an vector shape with a stroke when supplied with path data.',
+    strengths: 'Gives a "drawn" look to illustrations.',
+    weaknesses: 'If you don\'t have SVG artwork, this library will be useless.'
+      + ' A relatively young library with limited features, does not support easing.',
+  },
 };
 
 each(ROUTE, (o, key) => o.key = key);
