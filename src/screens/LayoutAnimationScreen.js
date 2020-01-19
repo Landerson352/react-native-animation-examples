@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LayoutAnimation, Platform, ScrollView, StyleSheet, View } from 'react-native';
+import { LayoutAnimation, Platform, ScrollView, StyleSheet, UIManager, View } from 'react-native';
 import { map, times } from 'lodash';
 import { usePrevious } from 'state-hooks';
 
