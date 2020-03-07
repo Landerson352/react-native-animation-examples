@@ -10,6 +10,16 @@ const ROUTE = {
     strengths: 'One-off animation effects such as bounce or pulse are dead simple.',
     weaknesses: 'No spring physics, so interrupted transitions look bad.'
   },
+  ANIMATED: {
+    title: 'Animated',
+    infoUrl: 'https://reactnative.dev/docs/animated',
+    description: 'React Native\'s Animated API focuses on declarative relationships between inputs and outputs, ' +
+      'with configurable transforms in between.',
+    strengths: 'Provides chain-able logic nodes for building complex gesture-based interactions.',
+    weaknesses: 'Very complex for simple effects that are not driven by gestures.',
+    note: 'This method is used extensively in William Candillon\'s "Can it Be Done in React Native" videos, ' +
+      'along with his Reanimated and Redash utility libraries for even more functionality.',
+  },
   ANIMATED_SPRITE: {
     title: 'Animated Sprite',
     github: 'micahrye/react-native-animated-sprite',

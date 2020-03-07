@@ -5,6 +5,7 @@ import { createSharedElementStackNavigator } from 'react-navigation-shared-eleme
 import createRouteConfig from './utils/createRouteConfig';
 import ROUTE from './route';
 import AnimatableScreen from './screens/AnimatableScreen';
+import AnimatedScreen from './screens/AnimatedScreen';
 import AnimatedSpriteScreen from './screens/AnimatedSpriteScreen';
 import ApisAndLibrariesScreen from './screens/ApisAndLibrariesScreen';
 import DesignPatternsScreen from './screens/DesignPatternsScreen';
@@ -29,6 +30,7 @@ const AppNavigator = createSharedElementStackNavigator(createStackNavigator, {
   ...createRouteConfig(ROUTE.DESIGN_PATTERNS, DesignPatternsScreen),
 
   ...createRouteConfig(ROUTE.ANIMATABLE, AnimatableScreen),
+  ...createRouteConfig(ROUTE.ANIMATED, AnimatedScreen),
   ...createRouteConfig(ROUTE.ANIMATED_SPRITE, AnimatedSpriteScreen),
   ...createRouteConfig(ROUTE.FLUID_TRANSITIONS, FluidTransitionsScreen),
   ...createRouteConfig(ROUTE.LAYOUT_ANIMATION, LayoutAnimationScreen),
