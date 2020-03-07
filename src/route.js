@@ -29,12 +29,6 @@ const ROUTE = {
     weaknesses: 'Requires each frame to be a separate image.'
       + ' If you don\'t have sprite artwork, this library will be useless.',
   },
-  APIS_AND_LIBRARIES: {
-    title: 'Apis & Libraries',
-  },
-  DESIGN_PATTERNS: {
-    title: 'Design Patterns',
-  },
   FADE_IN_IMAGE: {
     title: 'Fade in Image',
   },
@@ -57,9 +51,6 @@ const ROUTE = {
   },
   HERO_IMAGE: {
     title: 'Hero Image',
-  },
-  HOME: {
-    title: 'Animation Examples',
   },
   LAYOUT_ANIMATION: {
     title: 'LayoutAnimation',
@@ -152,6 +143,61 @@ const ROUTE = {
     weaknesses: 'If you don\'t have SVG artwork, this library will be useless.'
       + ' A relatively young library with limited features, does not support easing.',
   },
+};
+
+// Secondary menus
+ROUTE.APIS = {
+  title: 'React Native APIs',
+  description: 'Let\'s look at the various animation APIs built in to React Native , ' +
+    'using simple demos to understand their key capabilities. ' +
+    'If you\'d like to know more, follow the links on each screen to dig deeper.',
+  menuRoutes: [
+    ROUTE.ANIMATED,
+    ROUTE.LAYOUT_ANIMATION,
+  ],
+};
+ROUTE.LIBRARIES = {
+  title: 'Community Libraries',
+  description: 'Let\'s look at several community libraries, ' +
+    'using simple demos to understand their key capabilities. ' +
+    'If you\'d like to know more, follow the links on each screen to dig deeper.',
+  menuRoutes: [
+    ROUTE.ANIMATABLE,
+    ROUTE.ANIMATED_SPRITE,
+    ROUTE.FLUID_TRANSITIONS,
+    ROUTE.LOTTIE,
+    ROUTE.POSE,
+    ROUTE.REACT_SPRING,
+    ROUTE.SHARED_ELEMENT,
+    ROUTE.SVG_ANIMATIONS,
+  ],
+};
+ROUTE.DESIGN_PATTERNS = {
+  title: 'Design Patterns',
+  description: 'Let\'s look at the some effects you might want in implement, ' +
+    'and how you might achieve them in React Native. ' +
+    'Note that these are not specific to any library, ' +
+    'so there may be more than one way to do it!',
+  menuRoutes: [
+    ROUTE.FADE_IN_IMAGE,
+    ROUTE.HERO_IMAGE,
+    ROUTE.PARALLAX_IMAGE,
+  ],
+};
+
+// Main menus
+ROUTE.HOME = {
+  title: 'Animation Examples',
+  description: 'These examples are broken up into three sections. ' +
+    `"${ROUTE.APIS.title}" demonstrates various interfaces built in to React Native. ` +
+    `"${ROUTE.LIBRARIES.title}" demonstrates several additional libraries available on NPM. ` +
+    `"${ROUTE.DESIGN_PATTERNS.title}" shows you some potential approaches ` +
+    'you can use to achieve a specific animated effect in React Native.',
+  menuRoutes: [
+    ROUTE.APIS,
+    ROUTE.LIBRARIES,
+    ROUTE.DESIGN_PATTERNS,
+  ],
 };
 
 each(ROUTE, (o, key) => o.key = key);
