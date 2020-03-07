@@ -65,6 +65,11 @@ const ParallaxImageScreen = () => {
           By adjusting the image height according to scroll position,
           you can achieve a fluid parallax type effect for images.
         </Text>
+        <Text b p>
+          This screen uses the Reanimated library
+          for its ability to use animated values
+          in the interpolation output range.
+        </Text>
         <Text p>
           (The remainder of text on the page is only a visual placeholder.)
         </Text>

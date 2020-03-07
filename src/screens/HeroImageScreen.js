@@ -1,12 +1,11 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import Reanimated from 'react-native-reanimated';
+import { Animated, StyleSheet, View } from 'react-native';
 
 import s from '../styles';
 import LoremIpsum from '../components/LoremIpsum';
 import Text from '../components/Text';
 
-const { event, interpolate, Value } = Reanimated;
+const { event, Value } = Animated;
 
 const IMAGE_SOURCE = { uri: 'https://placebear.com/640/360' };
 const IMAGE_HEIGHT = 180;
@@ -29,24 +28,24 @@ const HeroImageScreen = () => {
     nativeEvent: { contentOffset: { y: scrollPosition } },
   }]);
   const imageStyle = {
-    height: interpolate(scrollPosition, {
+    height: scrollPosition.interpolate({
       inputRange: [0, IMAGE_HEIGHT],
       outputRange: [IMAGE_HEIGHT, 0],
     }),
-    opacity: interpolate(scrollPosition, {
+    opacity: scrollPosition.interpolate({
       inputRange: [0, IMAGE_HEIGHT],
       outputRange: [1, 0],
     }),
   };
 
   return (
-    <Reanimated.ScrollView
+    <Animated.ScrollView
       style={s.grow1}
       onScroll={handleScroll}
       scrollEventThrottle={1}
     >
       <View style={styles.imageContainer}>
-        <Reanimated.Image
+        <Animated.Image
           style={[styles.image, imageStyle]}
           source={IMAGE_SOURCE}
         />
@@ -62,7 +61,7 @@ const HeroImageScreen = () => {
         <LoremIpsum />
         <LoremIpsum />
       </View>
-    </Reanimated.ScrollView>
+    </Animated.ScrollView>
   );
 };
 
