@@ -66,7 +66,8 @@ const ROUTE = {
     description: 'LayoutAnimation automatically animates views to their new positions when the next layout happens.'
       + ' Which properties are animated can be configured with custom curve or spring-based easing.',
     strengths: 'Built into React Native. Handles all layout changes.',
-    weaknesses: 'Only opacity and scale supported. Key prop required on each element.',
+    weaknesses: 'Only opacity and scale supported. Key prop required on each element.' +
+      ' Interrupted transitions in Android may be janky.',
     infoUrl: 'https://medium.com/@Jpoliachik/react-native-s-layoutanimation-is-awesome-4a4d317afd3e',
   },
   LOTTIE: {
